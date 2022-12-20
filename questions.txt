@@ -1,0 +1,22 @@
+Q1) Implement Perceptron on this set. What is the final vector? How many mistakes were made by the algorithm?
+22 mistake were made in the algoritem.
+The final vector was [-2.46,  2.5 ]. 
+
+Q2) part 1- Analyze the behavior of Adaboost on train and test. Do you see any exceptional behavior? Explain.
+Analyze the behavior of Adaboost on train and test 
+We see that the train error grows down when the k grows up(eccept when k=2 -> train error grows up).
+unlike the test error, the train error always grows down when k grows up, the test error grows down until k=3 and after that the test error sometimes grows up and sometimes grows down but stay stable around 0.05 error.
+I see  3 exceptional behavior 
+
+1)when k=2 the train error grows up, which is the opposite of what I expected because we add one more rule for the running func. 
+
+2)we see that the train error grows down when k grows up(eccept when k=2) but in the test it's different, the test error grows down until k=3 and after that it stays still around 0.05 error
+
+3)althogh the train error grows up when k=2, the test error grows down when k=2.
+
+2. Do you see overfitting? Explain.
+yes, I see overfitting in this output.
+https://towardsdatascience.com/handling-overfitting-in-deep-learning-models-c760ee047c6e  
+We can identify overfitting by looking at validation metrics, like loss or accuracy. Usually, the validation metric stops improving after a certain number of epochs and begins to decrease afterward. The training metric continues to improve because the model seeks to find the best fit for the training data.
+And this excactly happened in our training and tests when k become bigger the train have less error but the test stop improving after k=3 .
+
